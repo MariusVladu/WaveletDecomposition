@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDecomposition", "WaveletDecomposition\WaveletDecomposition.csproj", "{61F9DD5E-82B7-4C86-98FF-4784B0CDCC1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D02CF3AE-3C57-4E61-85C3-E663AAEA9CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDecomposition.UnitTests", "Tests\WaveletDecomposition.UnitTests\WaveletDecomposition.UnitTests.csproj", "{6BE93E13-E73E-4A53-A1BE-7007854808ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61F9DD5E-82B7-4C86-98FF-4784B0CDCC1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F9DD5E-82B7-4C86-98FF-4784B0CDCC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F9DD5E-82B7-4C86-98FF-4784B0CDCC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F9DD5E-82B7-4C86-98FF-4784B0CDCC1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BE93E13-E73E-4A53-A1BE-7007854808ED} = {D02CF3AE-3C57-4E61-85C3-E663AAEA9CF6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E967C09-E7D0-47B0-8BA7-112DA70123F2}
+	EndGlobalSection
+EndGlobal
