@@ -4,6 +4,17 @@ namespace WaveletDecomposition
 {
     public static class Encoder
     {
+        public static double[,] PerformLevelsOfAnalysis(double[,] matrix, int numberOfLevels)
+        {
+            for (int level = 0; level < numberOfLevels; level++)
+            {
+                matrix = HorizontalAnalysis(matrix, level);
+                matrix = VerticalAnalysis(matrix, level);
+            }
+
+            return matrix;
+        }
+
         public static double[,] HorizontalAnalysis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);

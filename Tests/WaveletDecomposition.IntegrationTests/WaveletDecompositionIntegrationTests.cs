@@ -27,6 +27,44 @@ namespace WaveletDecomposition.IntegrationTests
             }
         }
 
+        [TestMethod]
+        public void TestThatAfterOneLevelOfAnalysisAndSynthesisMatrixRemainsTheSame()
+        {
+            var numberOfLevels = 1;
+            var size = 512;
+            var matrix = GetRandomMatrix(size);
+
+            var encoded = Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
+            var decoded = Decoder.PerformLevelsOfSynthesis(encoded, numberOfLevels);
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    Assert.AreEqual(encoded[i, j], decoded[i, j]);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestThatAfter5LevelsOfAnalysisAndSynthesisMatrixRemainsTheSame()
+        {
+            var numberOfLevels = 5;
+            var size = 512;
+            var matrix = GetRandomMatrix(size);
+
+            var encoded = Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
+            var decoded = Decoder.PerformLevelsOfSynthesis(encoded, numberOfLevels);
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    Assert.AreEqual(encoded[i, j], decoded[i, j]);
+                }
+            }
+        }
+
         private double[,] GetRandomMatrix(int size)
         {
             var matrix = new double[size, size];

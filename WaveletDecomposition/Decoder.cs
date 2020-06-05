@@ -4,6 +4,17 @@ namespace WaveletDecomposition
 {
     public static class Decoder
     {
+        public static double[,] PerformLevelsOfSynthesis(double[,] matrix, int numberOfLevels)
+        {
+            for (int level = 0; level < numberOfLevels; level++)
+            {
+                matrix = VerticalSynthesis(matrix, level);
+                matrix = HorizontalSynthesis(matrix, level);
+            }
+
+            return matrix;
+        }
+
         public static double[,] VerticalSynthesis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);
