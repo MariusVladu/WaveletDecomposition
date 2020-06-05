@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D02CF3AE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDecomposition.UnitTests", "Tests\WaveletDecomposition.UnitTests\WaveletDecomposition.UnitTests.csproj", "{6BE93E13-E73E-4A53-A1BE-7007854808ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDecomposition.IntegrationTests", "Tests\WaveletDecomposition.IntegrationTests\WaveletDecomposition.IntegrationTests.csproj", "{880CDA50-E262-48EB-87F1-5754F43CED1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BE93E13-E73E-4A53-A1BE-7007854808ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880CDA50-E262-48EB-87F1-5754F43CED1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880CDA50-E262-48EB-87F1-5754F43CED1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880CDA50-E262-48EB-87F1-5754F43CED1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880CDA50-E262-48EB-87F1-5754F43CED1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6BE93E13-E73E-4A53-A1BE-7007854808ED} = {D02CF3AE-3C57-4E61-85C3-E663AAEA9CF6}
+		{880CDA50-E262-48EB-87F1-5754F43CED1B} = {D02CF3AE-3C57-4E61-85C3-E663AAEA9CF6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E967C09-E7D0-47B0-8BA7-112DA70123F2}

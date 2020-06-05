@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6BE93E13-E73E-4A53-A1BE-7007854808ED}</ProjectGuid>
+    <ProjectGuid>{880CDA50-E262-48EB-87F1-5754F43CED1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WaveletDecomposition.UnitTests</RootNamespace>
-    <AssemblyName>WaveletDecomposition.UnitTests</AssemblyName>
+    <RootNamespace>WaveletDecomposition.IntegrationTests</RootNamespace>
+    <AssemblyName>WaveletDecomposition.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -47,23 +47,20 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonOperationsUnitTests.cs" />
-    <Compile Include="DecoderUnitTests.cs" />
-    <Compile Include="EncoderUnitTests.cs" />
+    <Compile Include="WaveletDecompositionIntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestHelpers\TestConstants.cs" />
-    <Compile Include="TestHelpers\Util.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WaveletDecomposition\WaveletDecomposition.csproj">
       <Project>{61f9dd5e-82b7-4c86-98ff-4784b0cdcc1d}</Project>
       <Name>WaveletDecomposition</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
