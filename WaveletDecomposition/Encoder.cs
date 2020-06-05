@@ -4,18 +4,16 @@ namespace WaveletDecomposition
 {
     public static class Encoder
     {
-        public static double[,] PerformLevelsOfAnalysis(double[,] matrix, int numberOfLevels)
+        public static void PerformLevelsOfAnalysis(double[,] matrix, int numberOfLevels)
         {
-            for (int level = 0; level < numberOfLevels; level++)
+            for (int level = 1; level <= numberOfLevels; level++)
             {
-                matrix = HorizontalAnalysis(matrix, level);
-                matrix = VerticalAnalysis(matrix, level);
+                HorizontalAnalysis(matrix, level);
+                VerticalAnalysis(matrix, level);
             }
-
-            return matrix;
         }
 
-        public static double[,] HorizontalAnalysis(double[,] matrix, int level)
+        public static void HorizontalAnalysis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);
             var width = matrix.GetLength(1) >> (level - 1);
@@ -28,11 +26,9 @@ namespace WaveletDecomposition
                 for (int i = 0; i < height; i++)
                     matrix[i, j] = listAfterAnalysis[i];
             }
-
-            return matrix;
         }
 
-        public static double[,] VerticalAnalysis(double[,] matrix, int level)
+        public static void VerticalAnalysis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);
             var width = matrix.GetLength(1) >> (level - 1);
@@ -43,10 +39,8 @@ namespace WaveletDecomposition
 
                 var listAfterAnalysis = GetListAnalysis(line);
                 for (int j = 0; j < width; j++)
-                    matrix[i, j] = listAfterAnalysis[i];
+                    matrix[i, j] = listAfterAnalysis[j];
             }
-
-            return matrix;
         }
 
         public static List<double> GetListAnalysis(List<double> list)

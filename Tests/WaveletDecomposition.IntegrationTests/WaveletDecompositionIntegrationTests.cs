@@ -14,15 +14,16 @@ namespace WaveletDecomposition.IntegrationTests
             var level = 1;
             var size = 512;
             var matrix = GetRandomMatrix(size);
+            var expectedMatrix = (double[,])matrix.Clone();
 
-            var encoded = Encoder.HorizontalAnalysis(matrix, level);
-            var decoded = Decoder.HorizontalSynthesis(matrix, level);
+            Encoder.HorizontalAnalysis(matrix, level);
+            Decoder.HorizontalSynthesis(matrix, level);
 
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    Assert.AreEqual(encoded[i, j], decoded[i, j]);
+                    Assert.AreEqual(expectedMatrix[i, j], Math.Round(matrix[i, j], 6));
                 }
             }
         }
@@ -33,15 +34,16 @@ namespace WaveletDecomposition.IntegrationTests
             var numberOfLevels = 1;
             var size = 512;
             var matrix = GetRandomMatrix(size);
+            var expectedMatrix = (double[,])matrix.Clone();
 
-            var encoded = Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
-            var decoded = Decoder.PerformLevelsOfSynthesis(encoded, numberOfLevels);
+            Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
+            Decoder.PerformLevelsOfSynthesis(matrix, numberOfLevels);
 
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    Assert.AreEqual(encoded[i, j], decoded[i, j]);
+                    Assert.AreEqual(expectedMatrix[i, j], Math.Round(matrix[i, j], 6));
                 }
             }
         }
@@ -52,15 +54,16 @@ namespace WaveletDecomposition.IntegrationTests
             var numberOfLevels = 5;
             var size = 512;
             var matrix = GetRandomMatrix(size);
+            var expectedMatrix = (double[,])matrix.Clone();
 
-            var encoded = Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
-            var decoded = Decoder.PerformLevelsOfSynthesis(encoded, numberOfLevels);
+            Encoder.PerformLevelsOfAnalysis(matrix, numberOfLevels);
+            Decoder.PerformLevelsOfSynthesis(matrix, numberOfLevels);
 
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    Assert.AreEqual(encoded[i, j], decoded[i, j]);
+                    Assert.AreEqual(expectedMatrix[i, j], Math.Round(matrix[i, j], 6));
                 }
             }
         }

@@ -1,21 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace WaveletDecomposition
 {
     public static class Decoder
     {
-        public static double[,] PerformLevelsOfSynthesis(double[,] matrix, int numberOfLevels)
+        public static void PerformLevelsOfSynthesis(double[,] matrix, int numberOfLevels)
         {
-            for (int level = 0; level < numberOfLevels; level++)
+            for (int level = numberOfLevels; level >= 1; level--)
             {
-                matrix = VerticalSynthesis(matrix, level);
-                matrix = HorizontalSynthesis(matrix, level);
+                VerticalSynthesis(matrix, level);
+                HorizontalSynthesis(matrix, level);
             }
-
-            return matrix;
         }
 
-        public static double[,] VerticalSynthesis(double[,] matrix, int level)
+        public static void VerticalSynthesis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);
             var width = matrix.GetLength(1) >> (level - 1);
@@ -24,8 +23,8 @@ namespace WaveletDecomposition
             {
                 var line = CommonOperations.GetMatrixLineAsList(i, matrix, width);
 
-                var upsampledL = UpSampleList(line, true);
-                var upsampledH = UpSampleList(line, false);
+                var upsampledL = UpSampleList(line.Take(height / 2).ToList(), true);
+                var upsampledH = UpSampleList(line.Skip(height / 2).ToList(), false);
 
                 var synthesisL = CommonOperations.ApplyConvolutionToList(upsampledL, Constants.SynthesisVectorL);
                 var synthesisH = CommonOperations.ApplyConvolutionToList(upsampledH, Constants.SynthesisVectorH);
@@ -33,11 +32,9 @@ namespace WaveletDecomposition
                 for (int j = 0; j < width; j++)
                     matrix[i, j] = synthesisL[j] + synthesisH[j];
             }
-
-            return matrix;
         }
 
-        public static double[,] HorizontalSynthesis(double[,] matrix, int level)
+        public static void HorizontalSynthesis(double[,] matrix, int level)
         {
             var height = matrix.GetLength(0) >> (level - 1);
             var width = matrix.GetLength(1) >> (level - 1);
@@ -46,8 +43,8 @@ namespace WaveletDecomposition
             {
                 var column = CommonOperations.GetMatrixColumnAsList(j, matrix, height);
 
-                var upsampledL = UpSampleList(column, true);
-                var upsampledH = UpSampleList(column, false);
+                var upsampledL = UpSampleList(column.Take(height / 2).ToList(), true);
+                var upsampledH = UpSampleList(column.Skip(height / 2).ToList(), false);
 
                 var synthesisL = CommonOperations.ApplyConvolutionToList(upsampledL, Constants.SynthesisVectorL);
                 var synthesisH = CommonOperations.ApplyConvolutionToList(upsampledH, Constants.SynthesisVectorH);
@@ -55,8 +52,6 @@ namespace WaveletDecomposition
                 for (int i = 0; i < height; i++)
                     matrix[i, j] = synthesisL[i] + synthesisH[i];
             }
-
-            return matrix;
         }
 
         public static List<double> UpSampleList(List<double> list, bool valuesOnEvenPositions)
