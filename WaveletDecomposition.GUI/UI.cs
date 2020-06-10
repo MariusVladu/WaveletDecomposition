@@ -9,6 +9,9 @@ namespace WaveletDecomposition.GUI
         public UI()
         {
             InitializeComponent();
+
+            startScaleX.Value = 512;
+            startScaleY.Value = 512;
         }
 
         private string originalImagePath;
@@ -32,6 +35,37 @@ namespace WaveletDecomposition.GUI
             waveletMatrix = ImageMapper.GetPixelMatrixFromImage(originalBitmap);
 
             this.originalImagePanel.BackgroundImage = originalBitmap;
+
+            this.buttonTestError.Enabled = true;
+            this.buttonSave.Enabled = true;
+            this.buttonVisualizeWavelet.Enabled = true;
+            this.buttonAnalysis.Enabled = true;
+            this.buttonSynthesis.Enabled = true;
+
+            this.buttonAnH1.Enabled = true;
+            this.buttonAnV1.Enabled = true;
+            this.buttonSyH1.Enabled = true;
+            this.buttonSyV1.Enabled = true;
+
+            this.buttonAnH2.Enabled = true;
+            this.buttonAnV2.Enabled = true;
+            this.buttonSyH2.Enabled = true;
+            this.buttonSyV2.Enabled = true;
+
+            this.buttonAnH3.Enabled = true;
+            this.buttonAnV3.Enabled = true;
+            this.buttonSyH3.Enabled = true;
+            this.buttonSyV3.Enabled = true;
+
+            this.buttonAnH4.Enabled = true;
+            this.buttonAnV4.Enabled = true;
+            this.buttonSyH4.Enabled = true;
+            this.buttonSyV4.Enabled = true;
+
+            this.buttonAnH5.Enabled = true;
+            this.buttonAnV5.Enabled = true;
+            this.buttonSyH5.Enabled = true;
+            this.buttonSyV5.Enabled = true;
         }
 
         private void buttonLoadWavelet_Click(object sender, EventArgs e)
@@ -62,12 +96,16 @@ namespace WaveletDecomposition.GUI
         {
             Encoder.HorizontalAnalysis(waveletMatrix, 1);
 
+            startScaleX.Value /= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonAnV1_Click(object sender, EventArgs e)
         {
             Encoder.VerticalAnalysis(waveletMatrix, 1);
+
+            startScaleY.Value /= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -76,12 +114,16 @@ namespace WaveletDecomposition.GUI
         {
             Encoder.HorizontalAnalysis(waveletMatrix, 2);
 
+            startScaleX.Value /= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonAnV2_Click(object sender, EventArgs e)
         {
             Encoder.VerticalAnalysis(waveletMatrix, 2);
+
+            startScaleY.Value /= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -90,12 +132,16 @@ namespace WaveletDecomposition.GUI
         {
             Encoder.HorizontalAnalysis(waveletMatrix, 3);
 
+            startScaleX.Value /= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonAnV3_Click(object sender, EventArgs e)
         {
             Encoder.VerticalAnalysis(waveletMatrix, 3);
+
+            startScaleY.Value /= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -104,12 +150,16 @@ namespace WaveletDecomposition.GUI
         {
             Encoder.HorizontalAnalysis(waveletMatrix, 4);
 
+            startScaleX.Value /= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonAnV4_Click(object sender, EventArgs e)
         {
             Encoder.VerticalAnalysis(waveletMatrix, 4);
+
+            startScaleY.Value /= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -118,12 +168,16 @@ namespace WaveletDecomposition.GUI
         {
             Encoder.HorizontalAnalysis(waveletMatrix, 5);
 
+            startScaleX.Value /= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonAnV5_Click(object sender, EventArgs e)
         {
             Encoder.VerticalAnalysis(waveletMatrix, 5);
+
+            startScaleY.Value /= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -132,12 +186,16 @@ namespace WaveletDecomposition.GUI
         {
             Decoder.HorizontalSynthesis(waveletMatrix, 1);
 
+            if(startScaleX.Value <= 256) startScaleX.Value *= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonSyV1_Click(object sender, EventArgs e)
         {
             Decoder.VerticalSynthesis(waveletMatrix, 1);
+
+            if (startScaleY.Value <= 256) startScaleY.Value *= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -146,12 +204,16 @@ namespace WaveletDecomposition.GUI
         {
             Decoder.HorizontalSynthesis(waveletMatrix, 2);
 
+            if (startScaleX.Value <= 256) startScaleX.Value *= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonSyV2_Click(object sender, EventArgs e)
         {
             Decoder.VerticalSynthesis(waveletMatrix, 2);
+
+            if (startScaleY.Value <= 256) startScaleY.Value *= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -160,12 +222,16 @@ namespace WaveletDecomposition.GUI
         {
             Decoder.HorizontalSynthesis(waveletMatrix, 3);
 
+            if (startScaleX.Value <= 256) startScaleX.Value *= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonSyV3_Click(object sender, EventArgs e)
         {
             Decoder.VerticalSynthesis(waveletMatrix, 3);
+
+            if (startScaleY.Value <= 256) startScaleY.Value *= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -174,12 +240,16 @@ namespace WaveletDecomposition.GUI
         {
             Decoder.HorizontalSynthesis(waveletMatrix, 4);
 
+            if (startScaleX.Value <= 256) startScaleX.Value *= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonSyV4_Click(object sender, EventArgs e)
         {
             Decoder.VerticalSynthesis(waveletMatrix, 4);
+
+            if (startScaleY.Value <= 256) startScaleY.Value *= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -188,12 +258,16 @@ namespace WaveletDecomposition.GUI
         {
             Decoder.HorizontalSynthesis(waveletMatrix, 5);
 
+            if (startScaleX.Value <= 256) startScaleX.Value *= 2;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
         private void buttonSyV5_Click(object sender, EventArgs e)
         {
             Decoder.VerticalSynthesis(waveletMatrix, 5);
+
+            if (startScaleY.Value <= 256) startScaleY.Value *= 2;
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -204,6 +278,9 @@ namespace WaveletDecomposition.GUI
 
             Encoder.PerformLevelsOfAnalysis(waveletMatrix, numberOfLevels);
 
+            startScaleX.Value /= 2 * numberOfLevels;
+            startScaleY.Value /= 2 * numberOfLevels;
+
             buttonVisualizeWavelet.PerformClick();
         }
 
@@ -212,6 +289,18 @@ namespace WaveletDecomposition.GUI
             var numberOfLevels = (int)levels.Value;
 
             Decoder.PerformLevelsOfSynthesis(waveletMatrix, numberOfLevels);
+
+            var startScaleValue = startScaleY.Value * 2 * numberOfLevels;
+            if (startScaleValue > 512)
+            {
+                startScaleX.Value = 512;
+                startScaleY.Value = 512;
+            }
+            else
+            {
+                startScaleX.Value = startScaleValue;
+                startScaleY.Value = startScaleValue;
+            }
 
             buttonVisualizeWavelet.PerformClick();
         }

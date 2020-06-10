@@ -134,6 +134,7 @@
             // 
             // buttonTestError
             // 
+            this.buttonTestError.Enabled = false;
             this.buttonTestError.Location = new System.Drawing.Point(15, 573);
             this.buttonTestError.Name = "buttonTestError";
             this.buttonTestError.Size = new System.Drawing.Size(75, 23);
@@ -162,6 +163,7 @@
             // 
             // buttonSave
             // 
+            this.buttonSave.Enabled = false;
             this.buttonSave.Location = new System.Drawing.Point(539, 573);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
@@ -182,6 +184,7 @@
             // 
             // buttonVisualizeWavelet
             // 
+            this.buttonVisualizeWavelet.Enabled = false;
             this.buttonVisualizeWavelet.Location = new System.Drawing.Point(936, 544);
             this.buttonVisualizeWavelet.Name = "buttonVisualizeWavelet";
             this.buttonVisualizeWavelet.Size = new System.Drawing.Size(115, 23);
@@ -324,6 +327,7 @@
             // 
             // buttonAnH1
             // 
+            this.buttonAnH1.Enabled = false;
             this.buttonAnH1.Location = new System.Drawing.Point(6, 19);
             this.buttonAnH1.Name = "buttonAnH1";
             this.buttonAnH1.Size = new System.Drawing.Size(75, 23);
@@ -334,6 +338,7 @@
             // 
             // buttonSyH1
             // 
+            this.buttonSyH1.Enabled = false;
             this.buttonSyH1.Location = new System.Drawing.Point(87, 19);
             this.buttonSyH1.Name = "buttonSyH1";
             this.buttonSyH1.Size = new System.Drawing.Size(75, 23);
@@ -344,6 +349,7 @@
             // 
             // buttonAnV1
             // 
+            this.buttonAnV1.Enabled = false;
             this.buttonAnV1.Location = new System.Drawing.Point(6, 48);
             this.buttonAnV1.Name = "buttonAnV1";
             this.buttonAnV1.Size = new System.Drawing.Size(75, 23);
@@ -354,6 +360,7 @@
             // 
             // buttonSyV1
             // 
+            this.buttonSyV1.Enabled = false;
             this.buttonSyV1.Location = new System.Drawing.Point(87, 48);
             this.buttonSyV1.Name = "buttonSyV1";
             this.buttonSyV1.Size = new System.Drawing.Size(75, 23);
@@ -390,6 +397,7 @@
             // 
             // buttonAnH2
             // 
+            this.buttonAnH2.Enabled = false;
             this.buttonAnH2.Location = new System.Drawing.Point(6, 19);
             this.buttonAnH2.Name = "buttonAnH2";
             this.buttonAnH2.Size = new System.Drawing.Size(75, 23);
@@ -400,6 +408,7 @@
             // 
             // buttonSyV2
             // 
+            this.buttonSyV2.Enabled = false;
             this.buttonSyV2.Location = new System.Drawing.Point(87, 48);
             this.buttonSyV2.Name = "buttonSyV2";
             this.buttonSyV2.Size = new System.Drawing.Size(75, 23);
@@ -410,6 +419,7 @@
             // 
             // buttonSyH2
             // 
+            this.buttonSyH2.Enabled = false;
             this.buttonSyH2.Location = new System.Drawing.Point(87, 19);
             this.buttonSyH2.Name = "buttonSyH2";
             this.buttonSyH2.Size = new System.Drawing.Size(75, 23);
@@ -420,6 +430,7 @@
             // 
             // buttonAnV2
             // 
+            this.buttonAnV2.Enabled = false;
             this.buttonAnV2.Location = new System.Drawing.Point(6, 48);
             this.buttonAnV2.Name = "buttonAnV2";
             this.buttonAnV2.Size = new System.Drawing.Size(75, 23);
@@ -443,6 +454,7 @@
             // 
             // buttonAnH3
             // 
+            this.buttonAnH3.Enabled = false;
             this.buttonAnH3.Location = new System.Drawing.Point(6, 19);
             this.buttonAnH3.Name = "buttonAnH3";
             this.buttonAnH3.Size = new System.Drawing.Size(75, 23);
@@ -453,6 +465,7 @@
             // 
             // buttonSyV3
             // 
+            this.buttonSyV3.Enabled = false;
             this.buttonSyV3.Location = new System.Drawing.Point(87, 48);
             this.buttonSyV3.Name = "buttonSyV3";
             this.buttonSyV3.Size = new System.Drawing.Size(75, 23);
@@ -463,6 +476,7 @@
             // 
             // buttonSyH3
             // 
+            this.buttonSyH3.Enabled = false;
             this.buttonSyH3.Location = new System.Drawing.Point(87, 19);
             this.buttonSyH3.Name = "buttonSyH3";
             this.buttonSyH3.Size = new System.Drawing.Size(75, 23);
@@ -473,6 +487,7 @@
             // 
             // buttonAnV3
             // 
+            this.buttonAnV3.Enabled = false;
             this.buttonAnV3.Location = new System.Drawing.Point(6, 48);
             this.buttonAnV3.Name = "buttonAnV3";
             this.buttonAnV3.Size = new System.Drawing.Size(75, 23);
@@ -496,6 +511,7 @@
             // 
             // buttonAnH4
             // 
+            this.buttonAnH4.Enabled = false;
             this.buttonAnH4.Location = new System.Drawing.Point(6, 19);
             this.buttonAnH4.Name = "buttonAnH4";
             this.buttonAnH4.Size = new System.Drawing.Size(75, 23);
@@ -506,6 +522,7 @@
             // 
             // buttonSyV4
             // 
+            this.buttonSyV4.Enabled = false;
             this.buttonSyV4.Location = new System.Drawing.Point(87, 48);
             this.buttonSyV4.Name = "buttonSyV4";
             this.buttonSyV4.Size = new System.Drawing.Size(75, 23);
@@ -516,6 +533,7 @@
             // 
             // buttonSyH4
             // 
+            this.buttonSyH4.Enabled = false;
             this.buttonSyH4.Location = new System.Drawing.Point(87, 19);
             this.buttonSyH4.Name = "buttonSyH4";
             this.buttonSyH4.Size = new System.Drawing.Size(75, 23);
@@ -526,6 +544,7 @@
             // 
             // buttonAnV4
             // 
+            this.buttonAnV4.Enabled = false;
             this.buttonAnV4.Location = new System.Drawing.Point(6, 48);
             this.buttonAnV4.Name = "buttonAnV4";
             this.buttonAnV4.Size = new System.Drawing.Size(75, 23);
@@ -549,6 +568,7 @@
             // 
             // buttonAnH5
             // 
+            this.buttonAnH5.Enabled = false;
             this.buttonAnH5.Location = new System.Drawing.Point(6, 19);
             this.buttonAnH5.Name = "buttonAnH5";
             this.buttonAnH5.Size = new System.Drawing.Size(75, 23);
@@ -559,6 +579,7 @@
             // 
             // buttonSyV5
             // 
+            this.buttonSyV5.Enabled = false;
             this.buttonSyV5.Location = new System.Drawing.Point(87, 48);
             this.buttonSyV5.Name = "buttonSyV5";
             this.buttonSyV5.Size = new System.Drawing.Size(75, 23);
@@ -569,6 +590,7 @@
             // 
             // buttonSyH5
             // 
+            this.buttonSyH5.Enabled = false;
             this.buttonSyH5.Location = new System.Drawing.Point(87, 19);
             this.buttonSyH5.Name = "buttonSyH5";
             this.buttonSyH5.Size = new System.Drawing.Size(75, 23);
@@ -579,6 +601,7 @@
             // 
             // buttonAnV5
             // 
+            this.buttonAnV5.Enabled = false;
             this.buttonAnV5.Location = new System.Drawing.Point(6, 48);
             this.buttonAnV5.Name = "buttonAnV5";
             this.buttonAnV5.Size = new System.Drawing.Size(75, 23);
@@ -633,6 +656,7 @@
             // 
             // buttonSynthesis
             // 
+            this.buttonSynthesis.Enabled = false;
             this.buttonSynthesis.Location = new System.Drawing.Point(87, 48);
             this.buttonSynthesis.Name = "buttonSynthesis";
             this.buttonSynthesis.Size = new System.Drawing.Size(75, 23);
@@ -643,6 +667,7 @@
             // 
             // buttonAnalysis
             // 
+            this.buttonAnalysis.Enabled = false;
             this.buttonAnalysis.Location = new System.Drawing.Point(6, 48);
             this.buttonAnalysis.Name = "buttonAnalysis";
             this.buttonAnalysis.Size = new System.Drawing.Size(75, 23);

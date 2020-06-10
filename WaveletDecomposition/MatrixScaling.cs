@@ -11,7 +11,7 @@
             {
                 for (int j = 0; j < width; j++)
                 {
-                    if (i > startY || j > startX)
+                    if (i >= startX || j >= startY)
                     {
                         matrix[i, j] = matrix[i, j] * scale + offset;
                     }
