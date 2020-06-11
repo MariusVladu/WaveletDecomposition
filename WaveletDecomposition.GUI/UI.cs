@@ -278,8 +278,8 @@ namespace WaveletDecomposition.GUI
 
             Encoder.PerformLevelsOfAnalysis(waveletMatrix, numberOfLevels);
 
-            startScaleX.Value /= 2 * numberOfLevels;
-            startScaleY.Value /= 2 * numberOfLevels;
+            startScaleX.Value /= (decimal)Math.Pow(2, numberOfLevels);
+            startScaleY.Value /= (decimal)Math.Pow(2, numberOfLevels);
 
             buttonVisualizeWavelet.PerformClick();
         }
@@ -290,7 +290,7 @@ namespace WaveletDecomposition.GUI
 
             Decoder.PerformLevelsOfSynthesis(waveletMatrix, numberOfLevels);
 
-            var startScaleValue = startScaleY.Value * 2 * numberOfLevels;
+            var startScaleValue = startScaleY.Value * (decimal)Math.Pow(2, numberOfLevels);
             if (startScaleValue > 512)
             {
                 startScaleX.Value = 512;
